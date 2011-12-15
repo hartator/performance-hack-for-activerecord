@@ -6,10 +6,13 @@ Small patch to ActiveRecord to make smart queries by rewriting Array#[] for Acti
 
 ### Installation
 
-Simply add `limit_critera.rb` to `config/initializers/` in a Rails App.
+Simply add `activerelation_limit.rb` to `config/initializers/` in a Rails App.
 
 ### Usage
 
-     Mongoid::Criteria#[3] # add limit(1) and offset(3) to Ruby MondDB Driver Query
-     Mongoid::Criteria#[3..5] # add limit (2) and offset(3) to Ruby MondDB Driver Query
-     Mongoid::Criteria#one # Get only one object (not first or last)
+     ActiveRelaltion#[3] # add limit 1 offset 3 to SQL Query
+     ActiveRelaltion#[3..5] # add limit 2 offset 3 to SQL Query
+     
+### Related
+
+Similar patch for Mongoid : https://github.com/hartator/Performance-Hack-for-Mongoid
